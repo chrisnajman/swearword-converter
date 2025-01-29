@@ -267,7 +267,8 @@ button {
         font-weight: inherit;
     }
     & p {
-        min-height: 6rem;
+        min-height: 6.1875rem;
+        text-wrap: auto;
     }
 }
 form,
@@ -301,6 +302,8 @@ form {
         padding: 1.25rem;
         font-family: inherit;
         font-size: inherit;
+        line-height: inherit;
+        font-family: Georgia, "Times New Roman", Times, serif;
     }
 }
 /* Theme */
