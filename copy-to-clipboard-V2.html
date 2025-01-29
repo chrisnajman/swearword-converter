@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy to clipboard</title>
+</head>
+
+<body>
+    <p id="text">Copying this vvvvvvvvvvvvvvvvvvvvvv</p>
+    <button id="copy-text-btn" type="button">Copy text</button> <!-- type="button"-->
+
+
+    <script>
+
+        const text = document.getElementById("text")
+        const copyTextBtn = document.getElementById("copy-text-btn")
+
+        copyTextBtn.addEventListener("click", () => {
+            copyText(text)
+        })
+
+
+        function copyText(htmlElement) {
+            if (!htmlElement) {
+                return
+            }
+
+            let elementText = htmlElement.textContent
+
+            let inputElement = document.createElement("input")
+            inputElement.setAttribute("value", elementText)
+            document.body.append(inputElement)
+
+            inputElement.select()
+
+            document.execCommand("copy")
+
+            inputElement.remove(inputElement)
+
+
+
+            alert("Text copied to clipboard!")
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
