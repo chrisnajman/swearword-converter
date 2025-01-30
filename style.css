@@ -197,7 +197,7 @@ button {
     padding-block: 2.5rem 4.5rem;
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.5rem;
     background-color: var(--bg-main);
     color: var(--fg);
 
