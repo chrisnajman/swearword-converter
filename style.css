@@ -87,6 +87,18 @@ p {
 a {
     text-decoration: none;
     text-underline-offset: 0.375rem;
+
+    &.external-link {
+        @media (hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &::after {
+            content: " \27F6";
+        }
+    }
 }
 
 button {
@@ -143,17 +155,6 @@ button {
 
 .footer {
     gap: 1.25rem;
-    & a {
-        @media (hover: hover) {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-
-        &::after {
-            content: " \27F6";
-        }
-    }
 }
 
 .title {
@@ -203,16 +204,6 @@ button {
 
     & a {
         color: var(--main-link);
-
-        &.external-link::after {
-            content: " \27F6";
-        }
-
-        @media (hover: hover) {
-            &:hover {
-                text-decoration: underline;
-            }
-        }
     }
 }
 
