@@ -6,6 +6,7 @@ The **Swearword Converter** replaces offensive words with euphemisms.
 
 ### Features
 
+- **Reveal Swearwords** – Hides the list of offensive words by default to create a more considerate user experience. Users can click the **Reveal swearwords** button to view the list only when needed, reducing unnecessary exposure to explicit language.
 - **Swearword Replacement** – Converts a predefined list of swearwords into humorous or milder alternatives.
 - **Real-Time Input Handling** – Enables the conversion button only when text is entered.
 - **Copy to Clipboard** – Easily copy the converted text for use elsewhere.
@@ -14,9 +15,10 @@ The **Swearword Converter** replaces offensive words with euphemisms.
 
 ### How It Works
 
-1. Enter or paste text containing any of the listed swearwords.
-2. Click the **Convert text** button to replace them with euphemisms.
-3. Copy the output using the **Copy to clipboard** button, if needed.
+1. Click the **Reveal swearwords** button to show the vocabulary list.
+2. Enter or paste text containing any of the listed swearwords.
+3. Click the **Convert text** button to replace them with euphemisms.
+4. Copy the output using the **Copy to clipboard** button, if needed.
 
 ---
 
@@ -25,6 +27,9 @@ The **Swearword Converter** replaces offensive words with euphemisms.
 - Built with **vanilla ES6 JavaScript**, focusing on modern syntax and browser APIs.
 - The JavaScript has been split into separate modules, improving code modularity:
 
+- `reveal-hide-vocab.js`: Manages the functionality to reveal or hide the list of swearwords. It toggles the visibility of the vocabulary section when the user clicks the **Reveal swearwords** button, ensuring offensive content is only shown on demand.
+
+  - `set-and-toggle-attribute.js`: Handles the setting and toggling of HTML attributes (such as `style` and `display:none`) to control the display state of the vocabulary list, improving both functionality and accessibility.
   - `replace-swearwords.js`: Handles the main logic for converting swearwords to euphemisms. It listens for form submissions, applies the conversion function, enables the copy button when text is converted, and initializes other helper functions.
     - `convert-swearwords.js`: Replaces recognized swearwords in the input text with predefined euphemisms using a regular expression and updates the output area.
     - `convert-btn-enable.js`: Enables the "Convert text" button when the user types in the textarea.
