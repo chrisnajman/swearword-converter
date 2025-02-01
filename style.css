@@ -67,7 +67,7 @@ h2 {
     font-weight: 600;
 }
 
-.intro {
+.center {
     width: fit-content;
     margin-inline: auto;
     text-wrap: pretty;
@@ -84,15 +84,11 @@ p {
     text-wrap: balance;
 }
 
-ol {
-    padding-left: 1.25rem;
-}
-
 a {
     text-decoration: none;
     text-underline-offset: 0.375rem;
 
-    &.external-link {
+    &[target="_blank"] {
         @media (hover: hover) {
             &:hover {
                 text-decoration: underline;
@@ -209,6 +205,40 @@ button {
     & a {
         color: var(--main-link);
     }
+
+    & button {
+        all: unset;
+        cursor: pointer;
+        margin-block-start: auto;
+        margin-inline-start: auto;
+        padding: 0.5rem 1rem;
+        background-color: #0075ff;
+        color: white;
+        font-weight: 600;
+        border-radius: 100vw;
+        border: 0.125rem solid transparent;
+
+        @media (hover: hover) {
+            &:hover {
+                border-color: black;
+            }
+        }
+
+        &:disabled {
+            background-color: #666;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.vocab {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    /* & button {
+            margin-inline-start: auto;
+        } */
 }
 
 .row {
@@ -299,6 +329,19 @@ form {
         font-size: inherit;
         line-height: inherit;
         font-family: Georgia, "Times New Roman", Times, serif;
+    }
+}
+
+/* About */
+.about {
+    & h2,
+    & p {
+        text-align: center;
+    }
+    & ol {
+        width: fit-content;
+        margin: 1.5em auto 0;
+        padding: 0;
     }
 }
 /* Theme */

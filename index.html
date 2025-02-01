@@ -17,7 +17,7 @@
         {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Swearword Converter",
+        "name": "Swearword Converter | Home",
         "description": "This page replaces swearwords with euphemisms.",
         "contentRating": "Mature"
         }
@@ -50,11 +50,45 @@
     <main class="main" id="main-content">
         <h1>Convert Swearwords</h1>
         <div class="container flow">
-            <p class="intro">Enter (or copy and paste) any text containing all or some of the following words:
-                <i>Arsehole, arsehole, Cunt, cunt, Fuck, fuck, Fucking, fucking, Prick, prick, Twat, twat, Wanker,
-                    wanker</i>,
-                then click to convert all swearwords to euphemisms.
-            </p>
+            <p class="center">Enter (or copy and paste) any text containing all or some of the following words:</p>
+
+            <div class="vocab">
+                <p class="center">
+                    <span data-word-obscured style="display:inline">Ar&#42;&#42;&#42;ole</span>
+                    <span data-word-full style="display:none">Arsehole</span>,
+                    <span data-word-obscured style="display:inline">ar&#42;&#42;&#42;ole</span>
+                    <span data-word-full style="display:none">arsehole</span>,
+
+                    <span data-word-obscured style="display:inline">C&#42;&#42;t</span>
+                    <span data-word-full style="display:none">Cunt</span>,
+                    <span data-word-obscured style="display:inline">c&#42;&#42;t</span>
+                    <span data-word-full style="display:none">cunt</span>,
+
+                    <span data-word-obscured style="display:inline">F&#42;&#42;k</span>
+                    <span data-word-full style="display:none">Fuck</span>,
+                    <span data-word-obscured style="display:inline">f&#42;&#42;k</span>
+                    <span data-word-full style="display:none">fuck</span>,
+
+                    <span data-word-obscured style="display:inline">F&#42;&#42;king</span>
+                    <span data-word-full style="display:none">Fucking</span>,
+                    <span data-word-obscured style="display:inline">f&#42;&#42;king</span>
+                    <span data-word-full style="display:none">fucking</span>,
+
+                    <span data-word-obscured style="display:inline">Pr&#42;&#42;k</span>
+                    <span data-word-full style="display:none">Prick</span>,
+                    <span data-word-obscured style="display:inline">pr&#42;&#42;k</span>
+                    <span data-word-full style="display:none">prick</span>,
+
+                    <span data-word-obscured style="display:inline">Tw&#42;t</span>
+                    <span data-word-full style="display:none">Twat</span>,
+                    <span data-word-obscured style="display:inline">tw&#42;t</span>
+                    <span data-word-full style="display:none">twat</span>.
+                </p>
+                <button type="button" id="toggle-reveal-btn"><span id="reveal-btn-txt">Reveal</span> swearwords</button>
+            </div>
+
+            <p class="center">Then click the "Convert text" button to generate euphemisms.</p>
+
 
             <div class="row">
                 <form id="replace-swearwords">
