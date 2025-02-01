@@ -39,17 +39,31 @@ The JavaScript has been split into separate modules, improving code modularity:
 
 - `theme.js`: Handles theme toggling (light/dark mode) and local storage management.
 
-  ### Inline JSON-LD metadata block
+  ### Inline JSON-LD metadata blocks
 
-  This is contained in the `head` of `index.html` and `about.html`.
+  `index.html`:
 
   ```HTML
       <script type="application/ld+json">
         {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Swearword Converter",
+        "name": "Swearword Converter | Home",
         "description": "This page replaces swearwords with euphemisms.",
+        "contentRating": "Mature"
+        }
+    </script>
+  ```
+
+  `about.html`:
+
+  ```HTML
+      <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Swearword Converter | About",
+        "description": "This page describes how to use the Swearword Converter.",
         "contentRating": "Mature"
         }
     </script>
