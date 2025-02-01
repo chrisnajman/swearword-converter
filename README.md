@@ -24,20 +24,20 @@ The **Swearword Converter** replaces offensive words with euphemisms.
 
 ## JavaScript
 
-- Built with **vanilla ES6 JavaScript**, focusing on modern syntax and browser APIs.
-- The JavaScript has been split into separate modules, improving code modularity:
+Built with **vanilla ES6 JavaScript**, focusing on modern syntax and browser APIs.
+
+The JavaScript has been split into separate modules, improving code modularity:
 
 - `reveal-hide-vocab.js`: Manages the functionality to reveal or hide the list of swearwords. It toggles the visibility of the vocabulary section when the user clicks the **Reveal swearwords** button, ensuring offensive content is only shown on demand.
-
   - `set-and-toggle-attribute.js`: Handles the setting and toggling of HTML attributes (such as `style` and `display:none`) to control the display state of the vocabulary list, improving both functionality and accessibility.
-  - `replace-swearwords.js`: Handles the main logic for converting swearwords to euphemisms. It listens for form submissions, applies the conversion function, enables the copy button when text is converted, and initializes other helper functions.
-    - `convert-swearwords.js`: Replaces recognized swearwords in the input text with predefined euphemisms using a regular expression and updates the output area.
-    - `convert-btn-enable.js`: Enables the "Convert text" button when the user types in the textarea.
-    - `copy-to-clipboard-btn-enable.js`: Enables the "Copy to clipboard" button when there is converted text available in the output section.
-    - `auto-resize-textarea.js`: Dynamically adjusts the height of the textarea based on its content to improve the user experience.
-  - `copy-to-clipboard.js`: Copies the converted euphemisms text to the clipboard when the user clicks the "Copy to clipboard" button, providing feedback on success or failure.
+- `replace-swearwords.js`: Handles the main logic for converting swearwords to euphemisms. It listens for form submissions, applies the conversion function, enables the copy button when text is converted, and initializes other helper functions.
+  - `convert-swearwords.js`: Replaces recognized swearwords in the input text with predefined euphemisms using a regular expression and updates the output area.
+  - `convert-btn-enable.js`: Enables the "Convert text" button when the user types in the textarea.
+  - `copy-to-clipboard-btn-enable.js`: Enables the "Copy to clipboard" button when there is converted text available in the output section.
+  - `auto-resize-textarea.js`: Dynamically adjusts the height of the textarea based on its content to improve the user experience.
+- `copy-to-clipboard.js`: Copies the converted euphemisms text to the clipboard when the user clicks the "Copy to clipboard" button, providing feedback on success or failure.
 
-  - `theme.js`: Handles theme toggling (light/dark mode) and local storage management.
+- `theme.js`: Handles theme toggling (light/dark mode) and local storage management.
 
   ### Inline JSON-LD metadata block
 
