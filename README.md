@@ -10,7 +10,6 @@ The **Swearword Converter** replaces offensive words with euphemisms.
 - **Swearword Replacement** – Converts a predefined list of swearwords into humorous or milder alternatives.
 - **Real-Time Input Handling** – Enables the conversion button only when text is entered.
 - **Copy to Clipboard** – Easily copy the converted text for use elsewhere.
-- **Auto-Resizing Textarea** – Dynamically adjusts the input field height for better readability.
 - **Light & Dark Mode** – Supports theme toggling.
 
 ### How It Works
@@ -21,6 +20,19 @@ The **Swearword Converter** replaces offensive words with euphemisms.
 4. Copy the output using the **Copy to clipboard** button, if needed.
 
 ---
+
+## CSS
+
+In Chromium browsers (Chrome, Edge) the `textarea` expands vertically to fit content, using the following CSS:
+
+```CSS
+    textarea {
+      /* Other rules */
+      field-sizing: content;
+    }
+```
+
+In unsupported browsers default scrolling behaviour occurs.
 
 ## JavaScript
 
@@ -34,7 +46,6 @@ The JavaScript has been split into separate modules, improving code modularity:
   - `convert-swearwords.js`: Replaces recognized swearwords in the input text with predefined euphemisms using a regular expression and updates the output area.
   - `convert-btn-enable.js`: Enables the "Convert text" button when the user types in the textarea.
   - `copy-to-clipboard-btn-enable.js`: Enables the "Copy to clipboard" button when there is converted text available in the output section.
-  - `auto-resize-textarea.js`: Dynamically adjusts the height of the textarea based on its content to improve the user experience.
 - `copy-to-clipboard.js`: Copies the converted euphemisms text to the clipboard when the user clicks the "Copy to clipboard" button, providing feedback on success or failure.
 
 - `theme.js`: Handles theme toggling (light/dark mode) and local storage management.

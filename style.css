@@ -292,7 +292,6 @@ button {
         font-weight: inherit;
     }
     & p {
-        min-height: 6.1875rem;
         text-wrap: auto;
     }
 }
@@ -308,6 +307,7 @@ textarea,
     border-width: 0.0625rem;
     padding: 1.25rem;
     color: var(--fg);
+    min-height: 6rem;
 }
 
 form {
@@ -322,12 +322,11 @@ form {
 
     & textarea {
         resize: none;
-        overflow: hidden;
-        min-height: 5.875rem;
         padding: 1.25rem;
         font-family: inherit;
         font-size: inherit;
         line-height: inherit;
+        field-sizing: content;
     }
 }
 

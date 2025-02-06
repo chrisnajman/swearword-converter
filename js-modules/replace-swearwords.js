@@ -1,7 +1,6 @@
 import convertSwearwords from "./convert-swearwords.js"
 import convertBtnEnable from "./convert-btn-enable.js"
 import copyBtnEnable from "./copy-to-clipboard-btn-enable.js"
-import autoResizeTextArea from "./auto-resize-textarea.js"
 
 export default function replaceSwearwords() {
   const replaceSwearwords = document.getElementById("replace-swearwords")
@@ -15,5 +14,4 @@ export default function replaceSwearwords() {
     copyBtnEnable()
   })
   convertBtnEnable()
-  autoResizeTextArea()
 }
