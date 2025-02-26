@@ -250,11 +250,15 @@ button {
             background-color: #666;
             cursor: not-allowed;
 
-            @media (hover: hover) {
+            /* @media (hover: hover) {
                 &:hover {
                     border-color: transparent;
                 }
-            }
+            } */
+        }
+
+        &:disabled:hover {
+            border-color: transparent;
         }
     }
 
