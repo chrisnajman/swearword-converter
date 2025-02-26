@@ -205,40 +205,12 @@ button {
     & a {
         color: var(--main-link);
     }
-
-    & button {
-        all: unset;
-        cursor: pointer;
-        margin-block-start: auto;
-        margin-inline-start: auto;
-        padding: 0.5rem 1rem;
-        background-color: #0075ff;
-        color: white;
-        font-weight: 600;
-        border-radius: 100vw;
-        border: 0.125rem solid transparent;
-
-        @media (hover: hover) {
-            &:hover {
-                border-color: black;
-            }
-        }
-
-        &:disabled {
-            background-color: #666;
-            cursor: not-allowed;
-        }
-    }
 }
 
 .vocab {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-
-    /* & button {
-            margin-inline-start: auto;
-        } */
 }
 
 .row {
@@ -248,9 +220,6 @@ button {
     gap: 1.25rem;
     margin-inline: auto;
     padding: 1.25rem;
-    background-color: var(--bg-row);
-    border: 0.125rem solid var(--border-color);
-    border-radius: var(--border-radius);
     width: fit-content;
 
     & button {
@@ -264,6 +233,12 @@ button {
         font-weight: 600;
         border-radius: 100vw;
         border: 0.125rem solid transparent;
+        text-wrap: balance;
+        text-align: center;
+
+        &.clear-text {
+            margin-inline: auto;
+        }
 
         @media (hover: hover) {
             &:hover {
@@ -280,6 +255,12 @@ button {
     & > section {
         margin-inline: auto;
     }
+}
+
+.form-container {
+    background-color: var(--bg-row);
+    border: 0.125rem solid var(--border-color);
+    border-radius: var(--border-radius);
 }
 
 .euphemisms {

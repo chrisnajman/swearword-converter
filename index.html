@@ -84,18 +84,19 @@
                     <span data-word-obscured style="display:inline">tw&#42;t</span>
                     <span data-word-full style="display:none">twat</span>.
                 </p>
-                <button type="button" id="toggle-reveal-btn"><span id="reveal-btn-txt">Reveal</span> swearwords</button>
+                <div class="row"><button type="button" id="toggle-reveal-btn"><span id="reveal-btn-txt">Reveal</span>
+                        swearwords</button></div>
             </div>
 
             <p class="center">Then click the "Convert text" button to generate euphemisms.</p>
 
 
-            <div class="row">
+            <div class="row form-container">
                 <form id="replace-swearwords">
 
                     <label>
                         <span><b>Input</b>: Swearwords</span>
-                        <textarea class="text-area" name="text-area"></textarea>
+                        <textarea class="text-area" name="text-area" id="swearwords-textarea"></textarea>
                     </label>
 
                     <button id="convert-text-btn" type="submit" disabled>Convert text</button>
@@ -109,7 +110,11 @@
                     <button id="copy-to-clipboard-btn" type="button" disabled>Copy to clipboard</button>
                 </div>
             </div>
-
+        </div>
+        <div class="row">
+            <button type="button" id="clear-text-button" class="clear-text" disabled>
+                Clear Input and/or Output
+            </button>
         </div>
     </main>
 
