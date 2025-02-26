@@ -249,6 +249,12 @@ button {
         &:disabled {
             background-color: #666;
             cursor: not-allowed;
+
+            @media (hover: hover) {
+                &:hover {
+                    border-color: transparent;
+                }
+            }
         }
     }
 
